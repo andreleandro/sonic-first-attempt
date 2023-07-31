@@ -59,3 +59,17 @@
         bottom: 110px;
     }
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.restart {
+    color: #000;
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 4.3em;
+    height: auto;
+    z-index: 3;
+    cursor: pointer;
+}

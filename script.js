@@ -1,11 +1,25 @@
 const sonic = document.querySelector(".sonic");
 const eggman = document.querySelector(".eggman");
 const fundo = document.querySelector(".fundo");
+const restart = document.querySelector(".restart");
+let green = document.querySelector(".green");
+
+green.volume = 0.1;
+window.onload = () => {
+    document.querySelector(".green").play()
+}
+
+function eggman_laugh () {
+    const eggmanlaugh = document.querySelector(".laugh")
+            eggmanlaugh.volume = 0.2
+            eggmanlaugh.loop = false;
+            eggmanlaugh.play()
+}
 
 const jump = () => {
     sonic.classList.add("jump");
     sonic.src = "./img/Sonic-Jump.gif";
-
+    
     setTimeout(() => {
         sonic.classList.remove("jump");
         sonic.src = "./img/Sonic.gif";
@@ -24,8 +38,23 @@ const loop = setInterval(() => {
         sonic.style.width = "240px";
 
         fundo.src = "./img/GameoverSMB-1.png";
-
+        eggman_laugh()
+        
     }
+
 },10);
 
+
+
 document.addEventListener("click", jump);
+document.addEventListener("click", jump_sound = () => {
+    const jumpinho = document.querySelector(".jumpinho");
+    jumpinho.volume = 0.2;
+    jumpinho.play();
+  })
+
+/*window.addEventListener("DOMContentLoaded", event => {
+    const green = document.querySelector(".green");
+    green.volume = 0.1;
+    green.play();
+});*/
