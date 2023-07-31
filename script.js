@@ -1,14 +1,13 @@
 const sonic = document.querySelector(".sonic");
 const eggman = document.querySelector(".eggman");
 const fundo = document.querySelector(".fundo");
-const restart = document.querySelector(".restart");
-let green = document.querySelector(".green");
+const green = document.querySelector(".background")
 
-green.volume = 0.1;
 window.onload = () => {
-    document.querySelector(".green").play()
+    green.volume = 0.1;
+    green.play();
 }
-
+    
 function eggman_laugh () {
     const eggmanlaugh = document.querySelector(".laugh")
             eggmanlaugh.volume = 0.2
@@ -44,8 +43,6 @@ const loop = setInterval(() => {
 
 },10);
 
-
-
 document.addEventListener("click", jump);
 document.addEventListener("click", jump_sound = () => {
     const jumpinho = document.querySelector(".jumpinho");
@@ -53,8 +50,3 @@ document.addEventListener("click", jump_sound = () => {
     jumpinho.play();
   })
 
-/*window.addEventListener("DOMContentLoaded", event => {
-    const green = document.querySelector(".green");
-    green.volume = 0.1;
-    green.play();
-});*/
